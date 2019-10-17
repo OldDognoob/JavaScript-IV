@@ -29,7 +29,7 @@ class Instructor extends Person {
     }
 
     grade(student, subject){
-        return `logs out ${student.name} recieves a perfect score on ${student}`;
+        return ` ${student.name} recieves a perfect score on ${student}`;
     }
 }
 
@@ -48,11 +48,11 @@ class Student extends Person {
     }
     
     PRAssignment(subject){
-        return `student.name has submitted a PR for ${subject}`;
+        return `${student.name} has submitted a PR for ${subject}`;
     }
     
     sprintChallenge(subject){
-        return `student.name has begun sprint challenge on ${subject}`;
+        return `${student.name} has begun sprint challenge on ${subject}`;
     }
 }
 
@@ -65,9 +65,11 @@ class ProjectManager extends Instructor {
         this.favInstructor = projectmanagerAttributes.favInstructor;
     }
     
-    standUp(){
-
+    standUp(slackchannel){
+       
     }
 
-
+    debugsCode(student, subject){
+      return `{name} debugs ${student.name}'s code on ${subject}`;
+    }
 }
