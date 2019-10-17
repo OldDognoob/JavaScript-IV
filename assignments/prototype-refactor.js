@@ -27,31 +27,34 @@ Car.prototype.drive = function(distance){
 2. Your goal is to refactor all of this code to use ES6 Classes. The console.log() statements should still return what is expected of them.
 
 */   class Car {
-    constractor(model, milesPerGallon, topspeed){
-        this.model= model;
-        this.milesPerGallon = milesPerGallon;
-        this.topspeed = 195;
-        this.odometer = 0;
-        this.tank = 0;
+    constractor(carAtrributes){
+        this.model= carAttributes.model;
+        this.topspeed = carAttributes.topspeed;
+        this.color = carAtrributes.color;
+        this.capacity = carAtrributes.capacity;
+        this.maker = carAttributes.maker;
     }
 
-    name(){
-        return `The ${this.model} with ${this.tank}`;
+   model(){
+        return `The ${this.model} with ${this.color}`;
     }
 
     drive(){
-        return `With ${this.tank} as fast as ${this.topspeed}`;
+        return `With ${this.topspeed} as fast as ${this.maker}`;
     }
 
-  const cabrio = new VW ({
-        maker: 'volkswagen',
-        model: 'Beetle S',
-        topspeed: '185',
-        color: 'BlueBlack',
-        capacity: 5,
-        year: 2018
-    })
+  
 }
+
+const cabrio = new VW ({
+  maker: 'volkswagen',
+  model: 'Beetle S',
+  topspeed: '185',
+  color: 'BlueBlack',
+  capacity: 2
+ 
+ 
+})
  console.log(cabrio);
  console.log(cabrio.name());
  

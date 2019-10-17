@@ -44,7 +44,7 @@ class Student extends Person {
     }
 
     listsSubjects(){
-        return `student's one by one  `
+        return ` `
     }
     
     PRAssignment(subject){
@@ -64,7 +64,10 @@ class ProjectManager extends Instructor {
         this.gradClassName = projectmanagerAttributes.gradClassName;
         this.favInstructor = projectmanagerAttributes.favInstructor;
     }
-     
+    
+    standUp(){
+
+    }
 
 
 }
